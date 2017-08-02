@@ -1,0 +1,23 @@
+html {
+	position: relative;
+	
+}
+
+body {
+    font: normal 18px Arial, sans-serif;
+    color: #000;
+    width: 100%;
+	background:#44abfd;
+}
+.container
+{
+ text-align:center;
+}
+
+.bot-interaction
+{
+padding:150px;
+text-align:center;
+color:#fff;	
+}
+

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="./style.css"/>
+   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="/socket.io.js"></script>
+ <script>
+  $(function () {
+    var socket = io();
+     socket.emit('need to start work', 'need to start work');
+	  socket.on('need to start work', function(msg){
+      window.open('http://www.google.com','_blank');
+	  window.open('http://www.yahoo.com','_blank');
+	  window.open('http://ims.pitsolutions.com/default.aspx','_blank');
+    });
+  });
+</script>
+      
+    <title>first bot</title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+    
+  </body>
+</html>

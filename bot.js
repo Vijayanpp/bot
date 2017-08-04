@@ -5,17 +5,29 @@
 		
 		init:function()
 		{
-			App.wishHello("","","")
+			App.getName();
+			App.wishHello("hi","how are you","Am at your Service");
+			
 		},
 		
 		wishHello:function(title,subtitle,data)
 		{
+			var name=localStorage.getItem('name');
+			(name==null)?name='pp':name=name;
 			
-			$("#title").text(title);
+			
+			$("#title").text(title+" "+name);
 			$("#subtitle").text(subtitle);
 			$("#content").text(data);
 			
+		},
+		getName:function()
+	{
+		if(localStorage)
+		{
+			localStorage.setItem('name','pp')
 		}
+	}
 	}
 	App.init();
 })(jQuery)

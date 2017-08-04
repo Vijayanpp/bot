@@ -11,9 +11,9 @@
     var socket = io();
      socket.emit('need to start work', 'need to start work');
 	  socket.on('need to start work', function(msg){
-      window.open('http://www.google.com','_blank');
-	  window.open('http://www.yahoo.com','_blank');
-	  window.open('http://ims.pitsolutions.com/default.aspx','_blank');
+    //   window.open('http://www.google.com','_blank');
+	  // window.open('http://www.yahoo.com','_blank');
+	  // window.open('http://ims.pitsolutions.com/default.aspx','_blank');
     });
   });
 </script>
@@ -24,6 +24,13 @@
     </style>
   </head>
   <body>
-    
+    <section class='container'>
+      <div class='bot-interaction'>
+        <div id='title'></div>
+        <div id='subtitle'></div>
+        <div id='content'></div>
+      </div>
+    </section>
+    <script type="text/javascript" src='bot.js'></script>
   </body>
 </html>

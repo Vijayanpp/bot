@@ -6,7 +6,7 @@
 		init:function()
 		{
 			App.getName();
-			App.wishHello("hi","how are you","Am at your Service");
+			App.wishHello("hi","","");
 			
 		},
 		

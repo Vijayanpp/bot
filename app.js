@@ -2,6 +2,9 @@ var express = require('express');
 var app=express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var SlackBot = require('slackbots');
+
+
 app.use(express.static(__dirname + '/'));
 
 app.get('/', function(req, res){
@@ -18,10 +21,6 @@ io.on('connection', function(socket){
 http.listen(3000, function(){
   console.log('listening on *:3000');
 });
-
-
-
-var SlackBot = require('slackbots');
  
 // create a bot 
 var bot = new SlackBot({
@@ -30,12 +29,20 @@ var bot = new SlackBot({
 });
  
 bot.on('start', function() {
+ 
     // more information about additional params https://api.slack.com/methods/chat.postMessage 
     var params = {
         icon_emoji: ':cat:'
     };    
     // define channel, where bot exist. You can adjust it there https://my.slack.com/services  
-    bot.postMessageToChannel('inquisive-smart-boys', ' hi all i am a bot , i am working for pp, can you please tell me todays status', params);
+    bot.postMessageToChannel('inquisive-smart-boys', ' Morning Guys', params);
     
+    bot.on('message',function(daa){
+      console.log(data);
+    });
+    
+    bot.on('error',function(){
+      console.log("an error occured")
+    })
    
 });
